@@ -5,3 +5,19 @@ body {
 .header {
   text-align: center;
 }
+
+pre {
+  background-color: #f4f4f4;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.line {
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.paragraph-block {
+  margin-top: 25px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
