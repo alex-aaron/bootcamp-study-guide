@@ -15,10 +15,96 @@
   </div> -->
   
   <div class="paragraph-block">
+    <h4>Arrays</h4>
+  </div>
+
+  <div class="paragraph-block">
     <p>
-      One of the most important parts of JavaScript-based web development is knowing how to access data on complex data structures like
-      objects and arrays. 
+      It's important to understand the difference between arrays and objects. Fundamentally, arrays are <b>numbered lists of like items.</b> All arrays
+      are <i>zero-indexed</i>, meaning each item is numbered starting at 0. So, for any array you create, you want to imagine there is an invisible index 
+      number next to each item.
     </p>
   </div>
+  <div class="paragraph-block">
+    <pre>
+      <code>
+        const friends = ['Bethany Joseph', 'Ben Mason', 'Sean Thomas'];
+        // indexes              0              1             2
+      </code>
+    </pre>
+  </div>
+
+  <div class="paragraph-block">
+    <p>
+      If you want to access an item on an array, you have to access its index either literally or via reference using <b>bracket notation</b>.
+    </p>
+  </div>
+
+  <div class="paragraph-block">
+    <pre>
+      <code>
+        const friends = ['Bethany Joseph', 'Ben Mason', 'Sean Thomas'];
+        
+        // accessing items using literal index values
+        console.log(friends[0]); // LOGS => Bethany Jones
+        console.log(friends[1]); // LOGS => Ben Mason
+        console.log(friends[2]); // LOGS => Sean Thomas
+      </code>
+    </pre>
+  </div>
+
+  <div class="paragraph-block">
+    <pre>
+      <code>
+        const friends = ['Bethany Joseph', 'Ben Mason', 'Sean Thomas'];
+        
+        // accessing items using references
+        const targetIndex = 1;
+
+        console.log(friends[targetIndex]); // LOGS => Ben Mason
+        console.log(friends[friends.length - 1]); // LOGS => Sean Thomas
+      </code>
+    </pre>
+  </div>
+
+  <div class="paragraph-block">
+    <p>
+      It's important to note that the principle of how you access values in an array is the same, even if the data gets more complex. Take an array
+      of subarrays for example...
+    </p>
+  </div>
+
+  <div class="paragraph-block">
+    <pre>
+      <code>
+        const nflDivision = [
+          [
+            "New Orleans Saints",
+            "Tampa Bay Buccaneers",
+            "Carolina Panthers",
+            "Atlanta Falcons"
+          ],
+          [
+            "Dallas Cowboys",
+            "Philadelphia Eagles",
+            "Washington Commanders",
+            "New York Giants"
+          ]
+        ];
+
+        console.log(nflDivisions[0][0]); // LOGS => 'New Orleans Saints'
+        console.log(nflDivision[1][nflDivisons[1].length - 1]); // LOGS => 'New York Giants'
+      </code>
+    </pre>
+  </div>
+
+  <div class="paragraph-block">
+    <p>
+      In the above example, <mark>nflDivisions[0]</mark> accesses a nested array of NFL team names. Since we know <mark>nflDivisions[0]</mark>
+      represents that data, then we know that accessing the zero index of THAT will give us <mark>'New Orleans Saints</mark>.
+    </p>
+  </div>
+  
+
 </body>
 </html>
